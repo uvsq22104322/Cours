@@ -106,18 +106,33 @@ def trirapide(tab):
         tab = trirapide(tab1) + [pivot] + trirapide(tab2)
     return tab
 
-def duree(tab,algo) :
+def duree(tab,algo) : #ajouter une vérif avec est_trié ! 
     debut = time.time()
     if algo == 1:
         triinsertion(tab)
+        est_trié(tab)
+        if est_trié(tab) == False:
+            print("PAS TRIE")
     elif algo == 2:
         triinsertion_dicho(tab)
+        est_trié(tab)
+        if est_trié(tab) == False:
+            print("PAS TRIE")
     elif algo == 3 :
         tripermutation(tab)
+        est_trié(tab)
+        if est_trié(tab) == False:
+            print("PAS TRIE")
     elif algo == 4 :
         trifusion(tab)
+        est_trié(tab)
+        if est_trié(tab) == False:
+            print("PAS TRIE")
     elif algo == 5 :
         trirapide(tab)
+        est_trié(tab)
+        if est_trié(tab) == False:
+            print("PAS TRIE")
     return (time.time() - debut)
 
 x = []
@@ -153,5 +168,11 @@ print(triinsertion(tab_test.copy()))
 print(tripermutation(tab_test.copy()))
 print(trifusion(tab_test.copy()))
 print(trirapide(tab_test.copy()))
+
+print("\n","Durée tri insertion",duree(tab_final.copy(),1),
+        "\n","Durée tri insertion dicho",duree(tab_final.copy(),2),
+        "\n","Durée tri permutation",duree(tab_final.copy(),3),
+        "\n","Durée tri fusion",duree(tab_final.copy(),4),
+        "\n","Durée tri rapide",duree(tab_final.copy(),5))
 
 print(duree(tab_test.copy(),2))  #pb = parfois la durée renvoyée est égale a 0 !
