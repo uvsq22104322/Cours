@@ -1,2 +1,3 @@
 Problèmes de droits ? impossible d'accèder aux fichiers textes ici, mêm si dans la racine : il faut mettre la source dans le bureau
 deuxième problème : remplace \ par / dans les chemins d'accés ; \ est un caractère ayant une fonction pour python
+il faut créer (90% du temps) le fichier avant d'utiliser les scripts
