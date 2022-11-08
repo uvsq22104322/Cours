@@ -1,0 +1,58 @@
+
+Pour tout les pseudo-codes suivant, la fonction estVide est considérée comme définie, ayant comme utilisation de vérifier si une liste donnée est vide ou non !
+
+
+Hauteur
+Entrée: noeud a
+Sortie: entier hauteur de a
+Début
+Si estVide(a):
+    retourner -1
+Sinon:
+    retourner 1+max(Hauteur(a.gauche),Hauteur(a.droite))
+
+################################
+
+On a ici un exemple de parcours préfixe
+
+Nombre de Noeuds
+Entrée: noeud a
+Sortie: entier nombre de noeuds de a
+Début
+Si estVide(a):
+    retourner 0
+Sinon:
+    retourner 1+(NombredeNoeuds(a.gauche),NombredeNoeuds(a.droite))
+
+################################
+
+On a ici un exemple de parcours postfixe
+
+Attention ! Pas de sortie donc pas possible de retourner quoique ce soit, on update juste des valeurs !
+
+Descendants
+Entrée: noeud a
+Sortie: RIEN
+Début
+Si !estVide(a):
+    Descendants(a.gauche)
+    Descendants(a.droite)
+    a.val = 0
+    Si !estVide(a.gauche):
+        a.val += 1 + a.gauche.val
+    Si !estVide(a.droite):
+        a.val += 1 + a.droite.val
+
+###############################
+
+Un_Fils
+Entrée: noeud a
+Sortie: entier nombre de sommet ayant un seul fils
+Début
+Si estVide(a):
+    retourner 0
+racine = 0
+Sinon:
+    Si estVide(a.gauche) and !estVide(a.droite) or !estVide(a.gauche) and estVide(a.droite):
+        racine = 1
+retourner Un_Fils(a.gauche) + Un_Fils(a.droite) + racine
