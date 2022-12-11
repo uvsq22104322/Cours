@@ -1,40 +1,40 @@
 import random
 import time
 import matplotlib.pyplot as plt
-# initialisation d’un tableau de taille 10 avec des valeurs aléatoires
+# initialisation d’un tableau de taille 1000 avec des valeurs aléatoires
 # pour vérifier la validité des algos de tris
 tab_test=[random.randint(0,20)for i in range(1000)]
 print(tab_test)
 
-def est_trié(tab_test): 
+def est_trié(tab): 
 #renvoie vrai si le tableau est trié
-    for i in range(0,len(tab_test)+1):
-        if tab_test[i] <= tab_test[i+1]:
+    for i in range(0,len(tab)+1):
+        if tab[i] <= tab[i+1]:
             return True
         else:
             return False
 
 
-def recherche_pos(tab_test,elem,fin):
+def recherche_pos(tab,elem,fin):
     for j in range(0,fin): 
     #cherche la position à laquelle on attribuera la valeur de tab[i], donc elem
-        if elem < tab_test[j]:
+        if elem < tab[j]:
             return j
     return fin  
 
 
-def triinsertion(tab_test):
-    for i in range(1,len(tab_test)): 
+def triinsertion(tab):
+    for i in range(1,len(tab)): 
     #processe chaque éléments du tableau
-        elem = tab_test[i] 
+        elem = tab[i] 
         #sauvegarde la valeur que l'on veut déplacer
-        pos = recherche_pos(tab_test,elem,i) 
+        pos = recherche_pos(tab,elem,i) 
         #cherche de position ou déplacer cette valeure
         for j in range(i-1,pos-1,-1): 
         #boucle de décalage des termes
-                tab_test[j+1] = tab_test[j]
-                tab_test[pos] = elem
-    return tab_test
+                tab[j+1] = tab[j]
+                tab[pos] = elem
+    return tab
 
 def recherche_pos_dicho(tab,elem,fin):
     debut = 0
@@ -47,23 +47,23 @@ def recherche_pos_dicho(tab,elem,fin):
     return fin 
 
 
-def triinsertion_dicho(tab_test):
+def triinsertion_dicho(tab):
     #identique a triinsertion, avec une recherche de pose différente
-    for i in range(1,len(tab_test)):
+    for i in range(1,len(tab)):
         pos = i
-        elem = tab_test[i]
-        pos = recherche_pos_dicho(tab_test,elem,i-1)
+        elem = tab[i]
+        pos = recherche_pos_dicho(tab,elem,i-1)
         for j in range(i-1,pos-1,-1):
-                tab_test[j+1] = tab_test[j]
-                tab_test[pos] = elem
-    return tab_test
+                tab[j+1] = tab[j]
+                tab[pos] = elem
+    return tab
 
-def tripermutation(tab_test):
-    for i in range (0,len(tab_test)):
-        for j in range(len(tab_test)-1):
-            if tab_test[j] > tab_test[j+1]:
-                tab_test[j], tab_test[j+1] = tab_test[j+1], tab_test[j]
-    return tab_test
+def tripermutation(tab):
+    for i in range (0,len(tab)):
+        for j in range(len(tab)-1):
+            if tab[j] > tab[j+1]:
+                tab[j], tab[j+1] = tab[j+1], tab[j]
+    return tab
 
 def fusion(tab1,tab2):
 #les deux tableaux étant triés, on ajoute les plus petits des deux les uns après les autres pour n'obtenir qu'un tableau
@@ -169,10 +169,10 @@ print(tripermutation(tab_test.copy()))
 print(trifusion(tab_test.copy()))
 print(trirapide(tab_test.copy()))
 
-print("\n","Durée tri insertion",duree(tab_final.copy(),1),
-        "\n","Durée tri insertion dicho",duree(tab_final.copy(),2),
-        "\n","Durée tri permutation",duree(tab_final.copy(),3),
-        "\n","Durée tri fusion",duree(tab_final.copy(),4),
-        "\n","Durée tri rapide",duree(tab_final.copy(),5))
+print("\n","Durée tri insertion",duree(tab_test.copy(),1),
+        "\n","Durée tri insertion dicho",duree(tab_test.copy(),2),
+        "\n","Durée tri permutation",duree(tab_test.copy(),3),
+        "\n","Durée tri fusion",duree(tab_test.copy(),4),
+        "\n","Durée tri rapide",duree(tab_test.copy(),5))
 
 print(duree(tab_test.copy(),2))  #pb = parfois la durée renvoyée est égale a 0 !
