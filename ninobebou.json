@@ -15,7 +15,11 @@
             "code_geass" : [
                 {
                     "name" : "code geass",
-                    "link" : ["https://www.youtube.com/watch?v=G8CFuZ9MseQ", "https://www.youtube.com/watch?v=0-Tivlwd6eY", "https://www.youtube.com/watch?v=Cl9XN9jzSV4", "https://www.youtube.com/watch?v=Mrgcz2JKCTc", "https://www.youtube.com/watch?v=mvFWDUhzrSo"],
+                    "link" : ["https://www.youtube.com/watch?v=G8CFuZ9MseQ",
+                              "https://www.youtube.com/watch?v=0-Tivlwd6eY", 
+                              "https://www.youtube.com/watch?v=Cl9XN9jzSV4", 
+                              "https://www.youtube.com/watch?v=Mrgcz2JKCTc", 
+                              "https://www.youtube.com/watch?v=mvFWDUhzrSo"],
                     "answers" : " "
                 }
             ]           
@@ -45,7 +49,7 @@
             "tower_of_god" : [
                 {
                     "name" : "tower of god",
-                    "link" : " ",
+                    "link" : "https://www.youtube.com/watch?v=apII5VFTce0",
                     "answers" : " "
                 }
             ]           
@@ -55,17 +59,18 @@
             "guilty_crown" : [
                 {
                     "name" : "guilty crown",
-                    "link" : " ",
+                    "link" : ["https://www.youtube.com/watch?v=09BjZaf8TFU",
+                              "https://www.youtube.com/watch?v=Hv4znGv6lzg"],
                     "answers" : " "
                 }
             ]           
         },
 
         {
-            "terror_in_resonnance" : [
+            "terror_in_resonance" : [
                 {
-                    "name" : "terror in resonnance",
-                    "link" : " ",
+                    "name" : "terror in resonance",
+                    "link" : "https://www.youtube.com/watch?v=g1ARRcK4LVs",
                     "answers" : " "
                 }
             ]           
@@ -75,7 +80,9 @@
             "ajin" : [
                 {
                     "name" : "ajin",
-                    "link" : " ",
+                    "link" : ["https://www.youtube.com/watch?v=26lUTSV-i1c",
+                              "https://www.youtube.com/watch?v=0SZbsHhv59I",
+                              "https://www.youtube.com/watch?v=oLPoO7rx94w"],
                     "answers" : " "
                 }
             ]           
@@ -85,7 +92,16 @@
             "sword_art_online" : [
                 {
                     "name" : "sword art online",
-                    "link" : " ",
+                    "link" : ["https://www.youtube.com/watch?v=cdezBN2V34o",
+                              "https://www.youtube.com/watch?v=xExRqZvnJc8",
+                              "https://www.youtube.com/watch?v=tssvLd-ZV2g",
+                              "https://www.youtube.com/watch?v=H1nBsEPvbGE",
+                              "https://www.youtube.com/watch?v=Jg_4ZzjTtjU",
+                              "https://www.youtube.com/watch?v=etMK4WKE48s",
+                              "https://www.youtube.com/watch?v=MdkTNopdUu8",
+                              "https://www.youtube.com/watch?v=9WdTDZLMWhs",
+                              "https://www.youtube.com/watch?v=4_mzYhp2Q0M",
+                              "https://www.youtube.com/watch?v=-fePZ-stsmY"],
                     "answers" : " "
                 }
             ]           
@@ -95,7 +111,7 @@
             "parasite" : [
                 {
                     "name" : "parasite",
-                    "link" : " ",
+                    "link" : "https://www.youtube.com/watch?v=Rm8UjBAS3cs",
                     "answers" : " "
                 }
             ]           
@@ -105,7 +121,9 @@
             "k_project" : [
                 {
                     "name" : "k project",
-                    "link" : " ",
+                    "link" : ["https://www.youtube.com/watch?v=0zUXHF3ruUY",
+                              "https://www.youtube.com/watch?v=O7Lr-TIZDlw",
+                              "https://www.youtube.com/watch?v=XutSG1zBHJI"],
                     "answers" : " "
                 }
             ]           
@@ -335,7 +353,8 @@
             "noragami" : [
                 {
                     "name" : "noragami",
-                    "link" : " ",
+                    "link" : ["https://www.youtube.com/watch?v=p9-SAbuon2M",
+                              "https://www.youtube.com/watch?v=KsDJ-jevHzQ"],
                     "answers" : " "
                 }
             ]           
@@ -619,6 +638,18 @@
                 }
             ]           
         },
+
+        {
+            "chainsaw_man" : [
+                {
+                    "name" : "chainsaw man",
+                    "link" : " ",
+                    "answers" : " "
+                }
+            ]           
+        },
+
+        
 
 
 
